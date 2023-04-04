@@ -1,0 +1,12 @@
+[Desktop Entry]
+Comment=Fedora Linux splash for Plasma5
+Name=Fedora-Splash
+X-KDE-PluginInfo-Author=notsag
+X-KDE-PluginInfo-Category=Plasma Look And Feel
+X-KDE-PluginInfo-Email=maxime@gaston.sh
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL 3.0
+X-KDE-PluginInfo-Name=fedora-splash
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://github.com/notsag/fedora-splash
+X-KDE-ServiceTypes=Plasma/LookAndFeel
