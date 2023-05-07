@@ -1,0 +1,6 @@
+2023-05-07 09:35:37.264 [info] update#setState idle
+2023-05-07 09:35:38.766 [info] Starting extension host with pid 7628 (fork() took 36 ms).
+2023-05-07 09:36:07.267 [info] update#setState checking for updates
+2023-05-07 09:36:07.541 [info] update#setState idle
+2023-05-07 09:38:53.378 [info] Waiting for extension host with pid 7628 to exit.
+2023-05-07 09:38:53.381 [info] Extension host with pid 7628 exited with code: 0, signal: null.

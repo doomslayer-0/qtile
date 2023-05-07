@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.accentColor": "blue",
+    "editor.fontFamily": "Ubuntu Mono Nerd",
+    "editor.cursorStyle": "underline",
+    "terminal.integrated.defaultProfile.linux": "zsh"
+}

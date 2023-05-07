@@ -1,0 +1,31 @@
+@import 'colors.css';
+.titlebar,
+.titlebar .background, * {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+
+.window-frame {
+    border-radius: 0 0 0 0;
+}
+
+.background.csd {
+    border-radius: 0 0 0px 0px;
+}
+.background.maximized, .background.solid-csd {
+    border-radius: 0;
+}
+
+.window-frame, .window-frame:backdrop {
+ box-shadow: 0 0 0 black;
+ border-style: none;
+ margin: 0;
+ border-radius: 0;
+}
+
+.titlebar {
+ border-radius: 0;
+} 

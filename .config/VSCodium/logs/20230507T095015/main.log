@@ -1,0 +1,6 @@
+2023-05-07 09:50:15.963 [info] update#setState idle
+2023-05-07 09:50:17.115 [info] Starting extension host with pid 9336 (fork() took 39 ms).
+2023-05-07 09:50:45.966 [info] update#setState checking for updates
+2023-05-07 09:50:46.221 [info] update#setState idle
+2023-05-07 10:01:16.480 [info] Waiting for extension host with pid 9336 to exit.
+2023-05-07 10:01:16.483 [info] Extension host with pid 9336 exited with code: 0, signal: null.

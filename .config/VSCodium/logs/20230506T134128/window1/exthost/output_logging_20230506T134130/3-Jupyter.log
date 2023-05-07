@@ -1,0 +1,21 @@
+VSCodium (1.77.3, undefined, desktop)
+Jupyter Extension Version: 2023.3.100.
+Python Extension Version: 2023.6.1.
+Workspace folder /home/alexandre/Programming
+info 13:41:30.743: LSP Notebooks experiment is enabled
+warn 13:41:30.857: Failed to get activated env vars with python /bin/python in 60ms
+info 13:41:30.865: Process Execution: > /bin/python -c "import site;print("USER_BASE_VALUE");print(site.USER_BASE);print("USER_BASE_VALUE");"
+> /bin/python -c "import site;print("USER_BASE_VALUE");print(site.USER_BASE);print("USER_BASE_VALUE");"
+info 13:41:30.882: Process Execution: > /bin/python -m pip list
+> /bin/python -m pip list
+info 13:41:30.930: Process Execution: > /bin/python -c "import pip;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+> /bin/python -c "import pip;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+error 13:41:30.952: interpreterPackages getPackageInformation, Class name = Kd, completed in 156ms, has a falsy return value, Arg 1: {"interpreter":{"id":"/bin/python","sysPrefix":"/usr","displayPath":{"$mid":1,"fsPath":"/bin/python","path":"/bin/python","scheme":"file"},"envName":"","uri":{"$mid":1,"fsPath":"/bin/python","external":"file:///bin/python","path":"/bin/python","scheme":"file"},"displayName":"","envType":"Unknown","version":{"major":3,"minor":11,"patch":3,"raw":"3.11.3 (main, Apr  5 2023, 15:52:25) [GCC 12.2.1 20230201]"}}} [su [Error]: Module 'pip' not installed.
+	at au.execModule (/home/alexandre/.vscode-oss/extensions/ms-toolsai.jupyter-2023.3.100-universal/out/extension.node.js:7:27390)
+	at async Kd.getPackageInformation (/home/alexandre/.vscode-oss/extensions/ms-toolsai.jupyter-2023.3.100-universal/out/extension.node.js:7:18779)] {
+  category: 'notinstalled',
+  moduleName: 'pip'
+}
+info 13:41:52.065: Shutting down notebooks for 3bd7e611-dec1-427f-a2fb-07eec20cac51
+info 13:41:52.065: Disposing HostJupyterExecution ed2bb96a-fb4f-4b23-95b3-42486a60e934
+info 13:41:52.065: Disposing HostJupyterExecution ed2bb96a-fb4f-4b23-95b3-42486a60e934

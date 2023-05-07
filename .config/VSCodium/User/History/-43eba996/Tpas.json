@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.accentColor": "blue",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.cursorStyle": "underline",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.fontSize": 16.5
+}
