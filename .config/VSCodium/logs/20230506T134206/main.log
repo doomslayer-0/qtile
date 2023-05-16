@@ -1,6 +1,0 @@
-2023-05-06 13:42:06.872 [info] update#setState idle
-2023-05-06 13:42:07.925 [info] Starting extension host with pid 164415 (fork() took 6 ms).
-2023-05-06 13:42:36.874 [info] update#setState checking for updates
-2023-05-06 13:42:37.128 [info] update#setState idle
-2023-05-06 13:45:24.552 [info] Waiting for extension host with pid 164415 to exit.
-2023-05-06 13:45:24.555 [info] Extension host with pid 164415 exited with code: 0, signal: null.

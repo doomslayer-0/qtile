@@ -1,6 +1,0 @@
-2023-05-07 10:07:18.180 [info] update#setState idle
-2023-05-07 10:07:19.267 [info] Starting extension host with pid 33971 (fork() took 7 ms).
-2023-05-07 10:07:48.181 [info] update#setState checking for updates
-2023-05-07 10:07:48.433 [info] update#setState idle
-2023-05-07 10:07:58.694 [info] Waiting for extension host with pid 33971 to exit.
-2023-05-07 10:07:58.698 [info] Extension host with pid 33971 exited with code: 0, signal: null.
