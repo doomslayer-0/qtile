@@ -1703,9 +1703,9 @@
             },
             "backupPath": "/home/alexandre/.config/VSCodium/Backups/827a757ddbd51a2fc37ca0ca363f0ac4",
             "uiState": {
-                "mode": 1,
-                "x": 4,
-                "y": 24,
+                "mode": 0,
+                "x": 2,
+                "y": 22,
                 "width": 1912,
                 "height": 1052
             }

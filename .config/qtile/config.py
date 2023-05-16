@@ -43,8 +43,12 @@ from libqtile.backend.wayland import InputConfig
 
 mod = "mod4"
 terminal = "kitty"
-browser = "firefox"
-secbrowser = "brave"
+fileman="nemo"
+if qtile.core.name == "x11":
+        browser = "firefox"
+elif qtile.core.name == "wayland":
+        browser = "/home/alexandre/.config/qtile/firefox.sh"
+browser2 = "brave"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -84,26 +88,27 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc='Run Launcher'),
     Key([mod, "Shift"], "d", lazy.spawn("rofi -show run"), desc='Run Desktop Launcher'),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Print Screen"),
-    Key([mod], "e", lazy.spawn("thunar"), desc="Open File Manager"),
+    Key([mod], "e", lazy.spawn(fileman), desc="Open File Manager"),
     Key([mod, "Shift"], "Return", lazy.spawn("alacritty"), desc="Open Alacritty"),
     Key([mod, "Shift"], "k", lazy.spawn("poweroff"), desc="Shutdown"),
     Key([mod, "Control", "Shift"], "k", lazy.spawn("systemctl reboot"), desc="Reboot"),
-    Key([mod, "Shift"], "f", lazy.spawn(secbrowser), desc="Open Brave"),
+    Key([mod, "mod1"], "k", lazy.spawn("systemctl suspend"), desc="Sleep"),
+    Key([mod, "Shift"], "f", lazy.spawn(browser2), desc="Open Brave"),
     Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 5%-")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 5%+")),
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"))
 ]
 
-groups = [Group("λ", layout='monadtall', matches=[Match(wm_class=["vscodium"])]),
-          Group("ζ", layout='monadtall', matches=[Match(wm_class=["firefox", "LibreWolf", "qutebrowser"])]),
-          Group("Δ", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
-          Group("ξ", layout='monadtall', matches=[Match(wm_class=["thunar"])]),
-          Group("θ", layout='monadtall', matches=[Match(wm_class=["ONLYOFFICE Desktop Editors"])]),
+groups = [Group("", layout='monadtall', matches=[Match(wm_class=["vscodium", "VSCodium"])]),
+          Group("", layout='monadtall', matches=[Match(wm_class=["firefox", "LibreWolf", "qutebrowser"])]),
+          Group("", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
+          Group("", layout='monadtall', matches=[Match(wm_class=["nemo"])]),
+          Group("", layout='monadtall', matches=[Match(wm_class=["ONLYOFFICE Desktop Editors"])]),
           #Group("CHAT", layout='monadtall'),
-          Group("Σ", layout='monadtall', matches=[Match(wm_class=["clementine", "elisa"])]),
-          #Group("ζθ", layout='monadtall', matches=[Match(wm_class=["vlc"])]),
-          Group("Ψ", layout='max', matches=[Match(wm_class=["lutris", "Steam", "V DOOMEternal"])])]
+          Group("", layout='monadtall', matches=[Match(wm_class=["clementine", "elisa"])]),
+          #Group("ζθ", layout='monadtall', matches=[Match(wm_class=["vlc"])]),
+          Group("", layout='monadtall', matches=[Match(wm_class=["lutris", "Steam", "doometernalxvk64.exe"])])]
 
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
 # MOD4 + index Number : Switch to Group[index]
@@ -191,24 +196,43 @@ if qtile.core.name == "x11":
                         foreground = colors[2],
                         background = colors[0]
                         ),
+                #widget.GroupBox(
+                        #font = "JetBrainsMono Nerd Font Bold",
+                        #fontsize = 13,
+                        #margin_y = 3,
+                        #margin_x = 0,
+                        #padding_y = 5,
+                        #padding_x = 3,
+                        #borderwidth = 3,
+                        #active = colors[7],
+                        #inactive = colors[6],
+                        #rounded = False,
+                        #highlight_color = colors[1],
+                        #highlight_method = "line",
+                        #this_current_screen_border = colors[6],
+                        #this_screen_border = colors [4],
+                        #other_current_screen_border = colors[6],
+                        #other_screen_border = colors[4],
+                        #foreground = colors[2],
+                        #background = colors[0]
+                        #),
                 widget.GroupBox(
-                        font = "JetBrainsMono Nerd Font Bold",
-                        fontsize = 13,
-                        margin_y = 3,
-                        margin_x = 0,
-                        padding_y = 5,
+                        font = "MesloLGS NF",
+                        fontsize = 16,
+                        padding_y = 0,
                         padding_x = 3,
                         borderwidth = 3,
-                        active = colors[7],
-                        inactive = colors[6],
+                        highlight_method = "text",
+                        active = colors[6],
+                        block_highlight_text_color=colors[6],
+                        inactive = colors[2],
                         rounded = False,
-                        highlight_color = colors[1],
-                        highlight_method = "line",
-                        this_current_screen_border = colors[6],
+                        highlight_color = colors[2],
+                        this_current_screen_border = colors[7],
                         this_screen_border = colors [4],
-                        other_current_screen_border = colors[6],
-                        other_screen_border = colors[4],
-                        foreground = colors[2],
+                        #other_current_screen_border = colors[6],
+                        #other_screen_border = colors[4],
+                        #foreground = colors[2],
                         background = colors[0]
                         ),
                 widget.TextBox(
@@ -244,6 +268,12 @@ if qtile.core.name == "x11":
                         background = colors[0],
                         padding = 0
                         ),
+                #widget.Sep(
+                        #linewidth = 0,
+                        #padding = 6,
+                        #foreground = colors[0],
+                        #background = colors[0]
+                        #),
                 #widget.Systray(
                         #background = colors[0],
                         #padding = 5
@@ -275,6 +305,27 @@ if qtile.core.name == "x11":
                         foreground = colors[0],
                         background = colors[0]
                         ),
+                widget.CheckUpdates(
+                        font = "Ubuntu Nerd Font",
+                        fontsize = 14,
+                        update_interval = 180,
+                        distro = "Arch_checkupdates",
+                        display_format = "  {updates}",
+                        foreground = colors[0],
+                        colour_have_updates = colors[0],
+                        colour_no_updates = colors[0],
+                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("kitty -e sudo pacman -Syu")},
+                        padding = 5,
+                        background = colors[6],
+                        decorations=[
+                            BorderDecoration(
+                                colour = colors[7],
+                                border_width = [0, 0, 2, 0],
+                                padding_x = 0,
+                                padding_y = None
+                            )
+                        ],
+                        ),
                 widget.ThermalSensor(
                         font = "Ubuntu Nerd Font",
                         fontsize = 14,
@@ -293,22 +344,6 @@ if qtile.core.name == "x11":
                             )
                         ],
                         ),
-                #widget.CheckUpdates(
-                        #update_interval = 1800,
-                        #distro = "Arch_checkupdates",
-                        #display_format = "{updates} New",
-                        #foreground = colors[5],
-                        #colour_have_updates = colors[5],
-                        #colour_no_updates = colors[5],
-                        #mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("kitty -e sudo pacman -Syu")},
-                        #padding = 5,
-                        #background = colors[0],
-                        #decorations=[
-                            #BorderDecoration(
-                                #colour = colors[5],
-                                #border_width = [0, 0, 2, 0],
-                                #$padding_x = 5,
-                                #padding_y = None,
                 widget.Memory(
                         font = "Ubuntu Nerd Font",
                         fontsize = 14,
@@ -649,10 +684,16 @@ reconfigure_screens = True
 # focus, should we respect this or not?
 auto_minimize = True
 
-@hook.subscribe.startup
-def autostart():
-    home = os.path.expanduser('~')
-    subprocess.call([home + '/.config/qtile/autostart.sh'])
+if qtile.core.name == "x11":
+        @hook.subscribe.startup
+        def autostart():
+                home = os.path.expanduser('~')
+                subprocess.call([home + '/.config/qtile/autostart.sh'])
+elif qtile.core.name == "wayland":
+        @hook.subscribe.startup
+        def autostart():
+                home = os.path.expanduser('~')
+                subprocess.call([home + '/.config/qtile/autowl.sh'])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
@@ -664,7 +705,8 @@ def autostart():
 # java that happens to be on java's whitelist.
 wmname = "qtile"
 
-wl_input_rules = {
-    "3141:31494:SONiX USB Keyboard": InputConfig(accel_profile='flat'),
-    "type:keyboard": InputConfig(kb_layout='br'),
-}
+if qtile.core.name == "wayland":
+        wl_input_rules = {
+        "3141:31494:SONiX USB Keyboard": InputConfig(accel_profile='flat'),
+        "type:keyboard": InputConfig(kb_layout='br'),
+        }
